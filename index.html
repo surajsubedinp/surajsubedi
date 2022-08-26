@@ -1,528 +1,510 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content=
-		"width=device-width, initial-scale=1.0">
-	<title> Suraj Subedi</title>
-</head>
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
 
-<body>
-	<!--Header(start)-->
-	<table id="header" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%" align="center">
-					<tr>
-						<td>
-							
+::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
+}
+/* navbar styling */
+nav{
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+nav.sticky{
+  background: #4070f4;
+  padding: 13px 0;
+}
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #4070f4;
+}
+nav.sticky .navbar .logo a{
+  color: #fff;
+}
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E2431;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color: #4070f4;
+}
+nav.sticky .menu a{
+  color: #FFF;
+}
+nav.sticky .menu a:hover{
+  color: #0E2431;
+}
+.navbar .media-icons a{
+  color: #4070f4;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a{
+  color: #FFF;
+}
 
-						</td>
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #4070f4;
+}
+nav.sticky .menu-btn{
+  color: #FFF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
 
-						<td>
-							<font face="Comic sans MS" size="6">
-								<b>Suraj Personel Portfolio</b>
-							</font>
-						</td>
+/* home section styling */
+.home{
+  height: 100vh;
+  width: 100%;
+  background: url("images/background.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+.home .home-content{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .text-one{
+  font-size: 25px;
+  color: #0E2431;
+}
+.home .text-two{
+  color: #0E2431;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .text-three{
+  font-size: 40px;
+  margin: 5px 0;
+  color: #4070f4;
+}
+.home .text-four{
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0E2431;
+}
+.home .button{
+  margin: 14px 0;
+}
+.home .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.home .button button:hover{
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
 
-						<td width="15%">
-							
-						</td>
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+section{
+  padding-top: 40px;
+}
+section .content{
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span{
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4070f4;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left{
+  width: 45%;
+}
+.about .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right{
+  width: 55%;
+}
+section  .topic{
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p{
+  text-align: justify;
+  color: #0E2431;
+}
+section .button{
+  margin: 16px 0;
+}
+section .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover{
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
 
-						<td>
-							<a href="#home" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Home
-								</font>
-							</a>
-						</td>
+ /* My Skills CSS */
+ .skills{
+   background: #F0F8FF;
+ }
+ .skills .content{
+   padding: 40px 0;
+ }
+ .skills .skills-details{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .skills-details .text{
+   width: 50%;
+ }
+ .skills-details p{
+   color: #0E2431;
+   text-align: justify;
+ }
+.skills .skills-details .experience{
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num{
+  color: #0E2431;
+  font-size: 80px;
+}
+.skills-details .experience .exp{
+  color: #0E2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box{
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic{
+  font-size: 20px;
+  color: #4070f4;
+}
+.skills-details .boxes .per{
+  font-size: 60px;
+  color: #4070f4;
+}
 
-						<td>
-							|
-						</td>
+/* My Services CSS */
+.services .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover{
+  background: #4070f4;
+  color: #fff;
+}
+.services .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #4070f4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background-color: #fff;
+  color: #4070f4;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #fff;
+}
+/* Contact Me CSS */
+.contact{
+  background: #F0F8FF;
+}
+.contact .content{
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .text{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
 
-						<td>
-							<a href="#about" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									About
-								</font>
-							</a>
-						</td>
+/* Footer CSS */
+footer{
+  background: #4070f4;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a{
+  font-weight: 500;
+  color: #FFF;
+}
+footer .text span a:hover{
+  text-decoration: underline;
+}
+/* Scroll TO Top Button CSS */
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #4070f4;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
 
-						<td>
-							|
-						</td>
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
 
-						<td>
-							<a href="#projects" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									
-								
-							
-						</td>
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color: #4070f4;
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+  }
+  .home .text-two{
+    font-size: 65px;
+  }
+  .home .text-three{
+    font-size: 35px;
+  }
+  .skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text{
+    width: 100%;
+}
+}
 
-						<td>
-							|
-						</td>
-
-						<td>
-							<a href="#achievements" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Achievements
-								</font>
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td>
-							<a href="#contact" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Contact
-								</font>
-							</a>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Header(end)-->
-
-	<!--Home(start)-->
-	<table id="home" border="1" width="100%"
-		cellpadding="20" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%" align="center">
-					<tr>
-						<td align="center" valign="middle">
-							<h3>
-								<font face="Times New Roman"
-									size="6" color="#ffffff">
-									Hi everyone!
-								</font>
-							</h3>
-
-							<h2>
-								<font face="Verdana" size="6"
-									color="#4CAF50">
-									<!-- Student from finance background -->
-								</font>
-							</h2>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Home(end)-->
-
-
-	<!--About(start)-->
-	<table id="about" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center"
-							valign="middle" colspan="2">
-							<font face="Verdana" size="7"
-								color="#4CAF50">
-								About Me
-							</font>
-							<hr color="#4CAF50" width="90">
-						</td>
-					</tr>
-
-					<tr>
-						<td width="40%">
-							<img src="img.png">
-						</td>
-
-						<td width="60%">
-							<font face="Verdana" size="4"
-								color="white">
-								Thanks for your interest, here
-								is a quick story of me and this
-								website.
-								<hr color="black">
-								My name is Suraj and i currently live 
-								in Pokhara,Nepal. I just gave my grade 12 
-								examination few weeks ago.
-								<hr color="black">
-
-								I do my web works mainly through 
-								wordpress, wix. I find other programming 
-								languages very hard to do.
-								
-								
-								.
-								<hr color="black">
-
-								This website is basically one of my
-								Web Development project which is
-								built using HTML only.
-								
-
-								Thanks again for reading this,
-								because of people like you, it
-								exists and prospers!
-								<hr color="black">
-								Cheers,
-								<br>
-								<b>Suraj.</b>
-							</font>
-						</td>
-					</tr>
-				</table>
-				<hr color="black">
-				<hr color="black">
-				<hr color="black">
-			</td>
-		</tr>
-	</table>
-	<!--About(end)-->
-
-
-	<!--Projects(start)-->
-
-									
-	<!--Projects(end)-->
-
-	<!--Achievement(start)-->
-	<table id="achievements" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center" valign="middle">
-							<font face="Verdana" size="7" color="#4CAF50">
-								Achievements
-								<hr color="#4CAF50" width="100">
-							</font>
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<font face="Verdana" size="4" color="white">
-								<ul>
-									<li>
-										<b>Intern at IT Company.</b>
-										<ul>
-											<li>
-												December,2020 - March 2021.
-											</li>
-											<li>
-												Write  articles
-												on finance related topics.
-											</li>
-										</ul>
-									</li>
-
-									<li>
-										<hr color="black">
-										<hr color="black">
-										<hr color="black">
-										<b> Capital Market Investor and Guide.</b>
-										<ul>
-											<li>
-												August,2020 - Present.
-											</li>
-											<li>
-												Conducted events and workshops on
-												different stock market classes.
-											</li>
-										</ul>
-									</li>
-
-									<li>
-										<hr color="black">
-										<hr color="black">
-										<hr color="black">
-										<b>Mentored HackTX.</b>
-										<ul>
-											<li>
-												October,2020.
-											</li>
-											<li>
-										
-											</li>
-											<hr color="black">
-											<hr color="black">
-											<hr color="black">
-											<hr color="black">
-											<hr color="black">
-										</ul>
-									</li>
-
-								</ul>
-
-							</font>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Achievement(end)-->
-
-
-	<!--Contact(start)-->
-	<table id="contact" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center"
-							valign="middle" colspan="2">
-							<font face="Verdana" size="7"
-								color="black">
-								Contact
-							</font>
-							<hr color="black" width="90">
-						</td>
-					</tr>
-
-					<tr>
-						<td align="center" valign="top">
-							<table border="0" width="50%" cellpadding="15"
-								cellspacing="0" align="center" bgcolor="black">
-								<tr>
-									<td width="30%">
-										<hr color="black">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											Name
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<input type="text" size="40">
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											Email
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<input type="email" size="40">
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											Number
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<input type="number" size="12">
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											Message
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<textarea rows="5"
-												cols="37">
-											</textarea>
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										
-									</td>
-									<td width="70%">
-										<button type="Submit">
-											<font face="Verdana"
-												size="4" color="black">
-												<b>Submit</b>
-											</font>
-										</button>
-										<hr color="black">
-										<hr color="black">
-									</td>
-								</tr>
-							</table>
-						</td>
-
-					</tr>
-					<tr>
-						<td colspan="2">
-							
-							
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Contact(end)-->
-
-
-	<!--Footer1(start)-->
-	<table id="footer" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%" align="center">
-					<tr>
-						<td width="13%" valign="top">
-							<b>LinkedIn</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td width="13%" valign="top">
-							<b>GitHub</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td width="13%" valign="top">
-							<b>HackerRank</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td width="13%" valign="top">
-							<b>Suraj</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td width="13%" valign="top">
-							<b>Twitter</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td width="13%" valign="top">
-							<b>Instagram</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td width="13%" valign="top">
-							<b>Email</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-
-						<td>
-							|
-						</td>
-
-						<td width="13%" valign="top">
-							<b>Website</b>
-							<a href="#" style="text-decoration:none">
-								➲
-							</a>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Footer1(end)-->
-
-
-	<!--Footer2(start)-->
-	<table id="footer" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%" align="center">
-					<tr>
-						<td width="80%" valign="top">
-							<font face="Verdana"
-								color="#4CAF50" size="5">
-								©Copyright 2022 Suraj Subedi.
-								All rights reserved.
-							</font>
-						</td>
-
-						<td width="10%">
-							<font face="arial" color="black" size="5">
-								<a href="#header" style="text-decoration:none">
-									<font face="Verdana" color="#4CAF50" size="6">
-										<b>TOP</b>
-									</font>
-								</a>
-							</font>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Footer2(end)-->
-
-</body>
-
-</html>
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #4070f4;
+  }
+}
