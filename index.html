@@ -1,21 +1,39 @@
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-public class LandingPage extends HttpServlet {
-  public void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
-    response.setContentType("text/html");
-    PrintWriter out = response.getWriter();
-    out.println("<html>");
-    out.println("<head>");
-    out.println("<title>Suraj Subedi - Personal Portfolio</title>");
-    out.println("</head>");
-    out.println("<body>");
-    out.println("<h1>Welcome to Suraj Subedi's Personal Portfolio</h1>");
-    out.println("<h2>Aspiring Investment Banker | Passionate about Cricket and Football</h2>");
-    out.println("<p>Contact me at subedisuraj710@gmail.com</p>");
-    out.println("</body>");
-    out.println("</html>");
-  }
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Suraj Subedi's Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my portfolio website</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Suraj Subedi and I am currently studying Business Information System at Torrens University Sydney. I have a passion for finance and aspire to become an investment banker in the future.</p>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>Project 1</li>
+          <li>Project 2</li>
+          <li>Project 3</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can contact me at mailtosurajsubedi@gmail.com</p>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2023 Suraj Subedi</p>
+    </footer>
+  </body>
+</html>
